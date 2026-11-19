@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a cited guide for each, a roadmap to the platinum, and a checklist that saves in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Legend</h1>
+    <p class="tagline">The offline GTA 6 trophy guide &amp; tracker — every trophy with its official name, description and grade, a guide in our own words with its sources, a roadmap to the platinum, and a checklist that remembers your progress.</p>
+    <nav class="views" aria-label="Views">
+      <button type="button" id="view-tracker" class="view-btn active" aria-pressed="true">Tracker</button>
+      <button type="button" id="view-roadmap" class="view-btn" aria-pressed="false">Roadmap to the platinum</button>
+    </nav>
+  </div>
+  <section class="progress" aria-label="Progress summary">
+    <div class="progress-big"><span id="earned-count">0</span><span class="of">/ 55 earned</span></div>
+    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <p class="progress-pct" id="progress-pct">0% to the platinum</p>
+    <ul class="grade-counts" id="grade-counts"></ul>
+    <p class="progress-note">Progress is saved in this browser only (localStorage). Nothing leaves your device.</p>
+  </section>
+</header>
+
+<main>
+  <section id="tracker-view">
+    <div class="missable-banner" id="missable-banner">
+      <strong>Watch out: 1 possibly missable trophy.</strong>
+      <span><a href="#trophy-28" data-open="28">Positive Mental Attitude</a> — meditate at every spot across Leonida. PowerPyx flags the first meditation, on the balcony at Jason&rsquo;s house in Chapter 1, as missable: it becomes unavailable after Chapter 1. Do it the moment it is offered.</span>
+    </div>
+
+    <div class="controls" role="search">
+      <label class="search-label">Search
+        <input type="search" id="search" placeholder="Trophy, mission or keyword…" autocomplete="off">
+      </label>
+      <fieldset class="kind-filters">
+        <legend>Filter by kind</legend>
+        <div class="chips" id="kind-chips"></div>
+      </fieldset>
+      <label class="grade-label">Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle"><input type="checkbox" id="spoiler"> <span>Hide story spoilers — story trophies stay hidden until earned</span></label>
+      <label class="toggle"><input type="checkbox" id="hide-earned"> <span>Hide earned</span></label>
+      <div class="io-buttons">
+        <button type="button" id="export">Export progress</button>
+        <button type="button" id="copy-link">Copy progress link</button>
+        <label class="import-btn">Import progress <input type="file" id="import" accept="application/json,.json" hidden></label>
+        <button type="button" id="reset">Reset</button>
+      </div>
+      <p class="io-note" id="io-note" aria-live="polite"></p>
+    </div>
+
+    <p class="result-count" id="result-count" aria-live="polite"></p>
+    <ol class="trophy-list" id="trophy-list"></ol>
+    <p class="empty" id="empty" hidden>No trophies match these filters. Try clearing the search or choosing another kind.</p>
+  </section>
+
+  <section id="roadmap-view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">About 200 hours, difficulty 4/10 (PowerPyx). Four stages, in order. The story comes first — every story trophy pops as you play — then the robberies and side strands, then the long activities and collectibles sweep, and finally the 100% checklist, which only opens after the credits.</p>
+    <ol class="stages" id="stages"></ol>
+    <aside class="roadmap-notes" id="roadmap-notes">
+      <h3>Before you start</h3>
+      <ul>
+        <li><strong>No online trophies.</strong> All 55 are single-player; the game launches without a new GTA Online mode.</li>
+        <li><strong>Cheats disable trophies</strong> — and you cannot save once one is used. Cheats only unlock after the story.</li>
+        <li><strong>No mission replay, no New Game+.</strong> Keep manual saves at the start of every chapter and one before the final mission.</li>
+        <li><strong>One possibly missable trophy:</strong> Positive Mental Attitude (see the banner on the Tracker). Nothing on the 100% checklist is missable.</li>
+      </ul>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games or Take-Two Interactive. Trophy names, descriptions and grades are the official PlayStation list; guide text is written for this guide and cites its sources beside each trophy.</p>
+  <p>Works fully offline — every file it loads lives in this folder, and it makes no network requests.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
